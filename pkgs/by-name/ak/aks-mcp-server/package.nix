@@ -3,7 +3,11 @@
   buildGoModule,
   fetchFromGitHub,
   installShellFiles,
+<<<<<<< HEAD
   makeBinaryWrapper,
+=======
+  makeWrapper,
+>>>>>>> 5ccdc4d3249f (Fixed Pr comments)
   azure-cli,
   kubectl,
   stdenv,
@@ -50,7 +54,6 @@ buildGoModule (finalAttrs: {
   ];
 
   postInstall = ''
-
 
     wrapProgram $out/bin/aks-mcp \
       --set-default AKS_MCP_COLLECT_TELEMETRY false \
